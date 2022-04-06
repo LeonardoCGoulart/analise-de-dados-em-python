@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
+print("EXERCICIO 01:")
 
 
 #Três alunos, X, Y e Z, estão matriculados em um curso de inglês.
 # Para avaliar esses alunos, o professor optou por fazer cinco provas.
 # Para que seja aprovado nesse curso, o aluno deverá ter a média aritmética
 # das notas das cinco provas maior ou igual a 6. Na tabela, estão dispostas
-# as notas que cada aluno tirou em cada prova.
+# as notas que cada aluno tirou em cada prova. (ENEM 2017)
 
 # Aluno  NOTA1  NOTA 2  NOTA3    NOTA4   NOTA5
 # X         5   5       5          10       6
@@ -47,3 +48,36 @@ print("o aluno Y esta ", estaAprovado(mediaAlunoY))
 print("o aluno Z esta ", estaAprovado(mediaAlunoZ))
 
 #dessa forma o Aluno Z é o unico reprovado, logo alternativa B
+
+###########################################################################################
+#exercio 2 (ENEM 2015)
+print("EXERCICIO 02:")
+
+#Em uma seletiva para a final dos 100 metros livres de natação, numa olimpíada,
+#os atletas, em suas respectivas raias, obtiveram os seguintes tempos:
+
+# raia          tempo
+# 1             20.90
+# 2             20.90
+# 3             20.50
+# 4             20.80
+# 5             20.60
+# 6             20.60
+# 7             20.90
+# 8             20.96
+
+#A mediana dos tempos apresentados no quadro é?
+
+#adicionando os tempos numa lista
+tempo = [20.90, 20.90, 20.50, 20.80, 20.60, 20.60, 20.90, 20.96]
+
+#conferindo se a quantidade esta ok
+print("tamanho da lista tempo:")
+print(len(tempo))
+
+#resultado
+print("resultado:", np.median(tempo))
+
+#logo a resposta é: 20.85
+
+
