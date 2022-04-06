@@ -81,3 +81,51 @@ print("resultado:", np.median(tempo))
 #logo a resposta é: 20.85
 
 
+#EXERCICIO 03
+print("EXERCICIO 03:")
+# "Pesquisando propriedades de objetos em uma lista"
+# "créditos: https://raccoon.ninja/pt/dev-pt/pesquisando-propriedades-de-objetos-em-uma-lista-python/"
+
+#Considere uma lista de objetos (clientes) e, dessa forma encontre quais deles possuem uma conta GMAIL
+
+#criando classe Cliente
+class Cliente:
+    nome = None
+    sobrenome = None
+    email = None
+    
+    def __init__(self, nome=None, sobrenome=None, email=None):
+        self.nome = nome
+        self.sobrenome = sobrenome
+        self.email = email
+
+#criando duas listas
+clientes_a = [
+    Cliente(nome="Joao", sobrenome="De Barro", email="jdb@hotmail.com"),
+    Cliente(nome="Maria", sobrenome="De Barro", email="mdb@hotmail.com"),
+    Cliente(nome="Albervaldo", sobrenome="Capivara", email="acapivara@bol.com.br"),
+    Cliente(nome="Xenia", sobrenome="Silva", email="xsilva@zipmail.com.br")
+]
+ 
+clientes_b = [
+    Cliente(nome="Mario", sobrenome="Ribeiro", email="mribeiro@aol.com"),
+    Cliente(nome="Carolina", sobrenome="Silva", email="carol_silva@terra.com.br"),
+    Cliente(nome="Shazam", sobrenome="Mata", email="shazam.m@gmail.com"),
+    Cliente(nome="Anderson", sobrenome="Santos", email="andersons@outlook.com")
+]
+
+#Para fazer a verificação, vamos utilizar a função any, que recebe uma expressão como argumento
+#e retorna True se existir alguma correspondência ou False se não existir.
+# any("gmail.com" in cliente.email for cliente in lista)
+
+#Verificando lista A
+if any("gmail.com" in cliente.email for cliente in clientes_a):
+    print("Alguem na lista A possui conta no gmail!")
+else:
+    print("Ninguem na lista A possui conta no gmail!")
+
+#Verificando lista B
+if any("gmail.com" in cliente.email for cliente in clientes_b):
+    print("Alguem na lista B possui conta no gmail!")
+else:
+    print("Ninguem na lista B possui conta no gmail!")
