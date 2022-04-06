@@ -129,3 +129,57 @@ if any("gmail.com" in cliente.email for cliente in clientes_b):
     print("Alguem na lista B possui conta no gmail!")
 else:
     print("Ninguem na lista B possui conta no gmail!")
+
+# exercicio 04
+print("EXERCICIO 04:")
+
+# UPE - 2014
+
+# Numa competição esportiva, cinco atletas estão disputando as três primeiras colocações da prova
+# de salto em distância. A classificação será pela ordem decrescente da média aritmética de pontos
+# obtidos por eles, após três saltos consecutivos na prova. Em caso de empate, o critério adotado 
+# será a ordem crescente do valor da variância. A pontuação de cada atleta está apresentada na tabela a seguir:
+
+# ATLETA        PONTUACAO1      PONTUACAO2      PONTUACAO3
+# A                 6           6                 6
+# B                 7           3                 8
+# C                 5           7                 6
+# D                 4           6                 8
+# E                 5           8                 5
+
+# Com base nas informações apresentadas, o primeiro, o segundo e o terceiro lugares dessa prova foram ocupados, respectivamente, pelos atletas
+
+#salvando pontuação em lista para evitar repetição de código, manutenção e deixar mais organizado
+pontuacaoAtletaA = [6, 6, 6]
+pontuacaoAtletaB = [7, 3, 8]
+pontuacaoAtletaC = [5, 7, 6]
+pontuacaoAtletaD = [4, 6, 8]
+pontuacaoAtletaE = [5, 8, 5]
+
+#calculando a media
+mediaAtletaA = np.mean(pontuacaoAtletaA)
+mediaAtletaB = np.mean(pontuacaoAtletaB)
+mediaAtletaC = np.mean(pontuacaoAtletaC)
+mediaAtletaD = np.mean(pontuacaoAtletaD)
+mediaAtletaE = np.mean(pontuacaoAtletaE)
+
+#como todas estao empatadas, calculando a variancia
+varAtletaA = np.var(pontuacaoAtletaA)
+varAtletaB = np.var(pontuacaoAtletaB)
+varAtletaC = np.var(pontuacaoAtletaC)
+varAtletaD = np.var(pontuacaoAtletaD)
+varAtletaE = np.var(pontuacaoAtletaE)
+
+#calculando a ordem
+resultadoFinal = [varAtletaA, varAtletaB, varAtletaC, varAtletaD, varAtletaE]
+resultadoFinal.sort(reverse = False) #Ordena
+print(resultadoFinal)
+#resultado = [0.0, 0.6666666666666666, 2.0, 2.6666666666666665, 4.666666666666667]
+
+# a) A; C; E
+# b) B; D; E
+# c) E; D; B
+# d) B; D; C
+# e) A; B; D
+
+#logo a resposta é alternativa A (A, C, E)
